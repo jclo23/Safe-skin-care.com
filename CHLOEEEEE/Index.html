@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Cosmetics Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <div class="navbar">
+            <div class="logo">Cosmetics</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#tips-section">Tips</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#sustainability">Sustainability</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="burger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </header>
+
+     <!-- Home Section -->
+    <section id="home" class="home-section">
+        <div class="home-content">
+            <h1>Welcome to Cosmetics</h1>
+            <p>Your guide to safe and effective skincare products.</p>
+            <button id="learn-more-btn">Learn More</button>
+        </div>
+    </section>
+
+    <!-- Recommendation Modal -->
+    <div id="recommendation-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Recommended Products</h2>
+            <div id="recommendation-list"></div>
+        </div>
+    </div>
+
+ <section id="about">
+    <div class="about-container">
+        <img src="mission.jpg" alt="Skincare Image" class="about-image">
+        <div class="about-text box">
+            <h3>Our Mission</h3>
+            <p>We strive to reduce harm in skincare by advocating for ingredient safety and ethical practices. Our goal is to provide products that not only enhance beauty but also protect the planet.</p>
+        </div>
+    </div>
+
+    <div class="about-container">
+        <img src="values.jpg" alt="Values Image" class="about-image">
+        <div class="about-text box">
+            <h3>Our Values</h3>
+            <p><strong>Ingredient Safety:</strong> We prioritize safe and non-toxic ingredients.</p>
+            <p><strong>Sustainability:</strong> Committed to eco-friendly practices and packaging.</p>
+            <p><strong>Ethical Practices:</strong> Supporting fair trade and cruelty-free products.</p>
+        </div>
+    </div>
+</section>
+</section>
+
+<section id="tips-section" class="skincare-tips">
+    <h1>Skincare Tips for Different Skin Types</h1>
+    <div class="tips-grid">
+        <!-- Sensitive Skin -->
+        <div class="tip-box">
+            <h2>Sensitive Skin</h2>
+            <img src="sensitiveskin.jpeg" alt="Sensitive Skin Tips">
+            <p>Sensitive skin is when you have a bad reaction to cosmetic products. Here’s the routine:</p>
+            <ul>
+                <li>Morning: Cleanser, Toner, Antioxidant Serum, Hydrating Serum, Eye Cream, Moisturizer, Sunscreen</li>
+                <li>Night: Oil-Based Cleanser, Water-Based Cleanser, Toner, Targeted Serum, Eye Cream, Retinol, Moisturizer</li>
+            </ul>
+        </div>
+        <!-- Normal Skin -->
+        <div class="tip-box">
+            <h2>Normal Skin</h2>
+            <img src="normalskin.jpg" alt="Normal Skin Tips">
+            <p>Normal skin may come down to genetics. Here's your skincare routine:</p>
+            <ul>
+                <li>Morning: Cleanser, Toner, Antioxidant Serum, Hydrating Serum, Eye Cream, Moisturizer, Sunscreen</li>
+                <li>Night: Oil-Based Cleanser, Water-Based Cleanser, Toner, Targeted Serum, Eye Cream, Retinol, Moisturizer</li>
+            </ul>
+        </div>
+        <!-- Combination Skin -->
+        <div class="tip-box">
+            <h2>Combination Skin</h2>
+            <img src="combinationskin.jpg" alt="Combination Skin Tips">
+            <p>Combination skin is when you have both oily and dry areas. Try this routine:</p>
+            <ul>
+                <li>Morning: Balanced Cleanser, Toner, Antioxidant Serum, Hydrating Serum, Eye Cream, Oil-Free Moisturizer, Sunscreen</li>
+                <li>Night: Oil-Based Cleanser, Water-Based Cleanser, Toner, Targeted Serum, Eye Cream, Retinol, Moisturizer</li>
+            </ul>
+        </div>
+        <!-- Oily Skin -->
+        <div class="tip-box">
+            <h2>Oily Skin</h2>
+            <img src="oilyskin.jpg" alt="Oily Skin Tips">
+            <p>Oily skin is common and presents unique challenges. Follow this regimen:</p>
+            <ul>
+                <li>Morning: Foaming Cleanser, Toner, Antioxidant Serum, Lightweight Hydrating Serum, Eye Cream, Oil-Free Moisturizer, Sunscreen</li>
+                <li>Night: Oil-Based Cleanser, Water-Based Cleanser, Toner, Salicylic Acid Serum, Eye Cream, Retinol, Oil-Free Moisturizer</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section id="products" class="animate-section products-section">
+    <h2>Product Recommendations</h2>
+    <p>Discover our curated list of safe and effective skincare products tailored to your needs.</p>
+
+    <!-- Filter Buttons -->
+    <div class="filter-btns">
+        <button class="filter-btn" data-category="all">All</button>
+        <button class="filter-btn" data-category="sensitive">Sensitive Skin</button>
+        <button class="filter-btn" data-category="normal">Normal Skin</button>
+        <button class="filter-btn" data-category="combination">Combination Skin</button>
+        <button class="filter-btn" data-category="oily">Oily Skin</button>
+    </div>
+    <!-- Product Cards -->
+    <div class="product-grid">
+        <div class="product-card routine-card" data-category="sensitive">
+            <h3>Sensitive Skin - Morning Routine</h3>
+
+            <h4>Cleanser</h4>
+            <img src="MCOS.jpg" alt="Sensitive Skin Tips">
+            <p>Cetaphil Gentle Skin Cleanser</p>
+            <p class="routine-rating">★★★★☆ (4.5/5)</p>
+
+            <h4>Toner/Mist</h4>
+            <img src="TMMS.jpg" alt="Sensitive Skin Tips">
+            <p>Fresh Skinlab Tomato Glass Skin Hydrating Mist</p>
+            <p class="routine-rating">★★★★☆ (4.4/5)</p>
+
+            <h4>Antioxidant Serum</h4>
+            <img src="ASMS.jpg" alt="Sensitive Skin Tips">
+            <p>Human Nature Sunflower Beauty Oil</p>
+            <p class="routine-rating">★★★★☆ (4.5/5)</p>
+
+            <h4>Moisturizer</h4>
+            <img src="CMCMS.jpg" alt="Sensitive Skin Tips">
+            <p>CeraVe Moisturizing Cream</p>
+            <p class="routine-rating">★★★★★ (4.8/5)</p>
+
+            <h4>Sunscreen</h4>
+            <img src="ARMS.jpg" alt="Sensitive Skin Tips">
+            <p>Biore UV Aqua Rich Watery Essence SPF 50+</p>
+            <p class="routine-rating">★★★★★ (4.7/5)</p>
+
+            <h3 class="routine-type">Sensitive Skin - Night Routine</h4>
+
+            <h4>Water-Based Cleanser</h4>
+            <img src="BNS.webp" alt="Oily Skin Tips">
+            <p>Banila Co Clean It Zero Cleansing Balm</p>
+            <p class="routine-rating">★★★★☆ (4.6/5)</p>
+            
+            <h4>Toner/Mist</h4>
+            <img src="TNS.jpg" alt="Oily Skin Tips">
+            <p>Thayers Alcohol-Free Witch Hazel Toner</p>
+            <p class="routine-rating">★★★★☆ (4.4/5)</p>
+
+            <h4>Targeted Night Serum</h4>
+            <img src="ONS.jpeg" alt="Oily Skin Tips">
+            <p>The Ordinary Niacinamide 10% + Zinc 1%</p>
+            <p class="routine-rating">★★★★☆ (4.5/5)</p>
+
+            <h4>Eye Cream</h4>
+            <img src="ENS.jpeg" alt="Oily Skin Tips">
+            <p>Olay Eyes Brightening Eye Cream</p>
+            <p class="routine-rating">★★★★☆ (4.3/5)</p>
+
+            <h4>Moisturizer</h4>
+            <img src="ACNS.jpg" alt="Oily Skin Tips">
+            <p>Aveeno Calm + Restore Nourishing Gel Cream </p>
+            <p class="routine-rating">★★★★☆ (4.5/5)</p>
+        </div>
+
+        <!-- Repeat for Normal Skin, Combination Skin, Oily Skin -->
+        <div class="product-card routine-card" data-category="normal">
+            <h3>Normal Skin - Morning Routine</h3>
+            <h4>Cleanser</h4>
+            <img src="CMN.jpg" alt="Normal Skin Tips">
+            <p>Human Nature Gentle Cleansing Foam</p>
+            <p class="routine-rating">★★★★☆ (4.5/5)</p>
+            
+            <h4>Toner/Mist</h4>
+            <img src="LMN.jpg" alt="Normal Skin Tips">
+            <p>Luxe Organix Rose Water Toner</p>
+            <p class="routine-rating">★★★★☆ (4.6/5)</p>
+
+            <h4>Hydrating Serum</h4>
+            <img src="HMN.avif" alt="Normal Skin Tips">
+            <p>Human Nature Hydrating Serum</p>
+            <p class="routine-rating">★★★★☆ (4.5/5)</p>
+
+            <h4>Moisturizer</h4>
+            <img src="MMN.webp" alt="Normal Skin Tips">
+            <p>Multi-Vitamin Nourishing Moisturizer</p>
+            <p class="routine-rating">★★★★☆ (4.2/5)</p>
+
+            <h4>Sunscreen</h4>
+            <img src="SMN.png" alt="Normal Skin Tips">
+            <p>SPF 50 Sunscreen Gel Cream</p>
+            <p class="routine-rating">★★★★☆ (4.5/5)</p>
+
+            <h3 class="routine-type">Normal Skin - Night Routine</h4>
+            
+                <h4>Oil-Based Cleanser</h4>
+                <img src="ONN.gif" alt="Oily Skin Tips">
+                <p>Cleansing Oil with Coconut & Argan Oil</p>
+                <p class="routine-rating">★★★★☆ (4.3/5)</p>
+
+                <h4>Toner/Mist</h4>
+                <img src="ANN.png" alt="Normal Skin Tips">
+                <p>Alcohol-Free Witch Hazel Toner (Cucumber)</p>
+                <p class="routine-rating">★★★★☆ (4.6/5)</p>
+
+                <h4>Targeted Serum</h4>
+                <img src="TNN.jpg" alt="Oily Skin Tips">
+                <p>Niacinamide</p>
+                <p class="routine-rating">★★★★☆ (4.5/5)</p>
+
+                <h4>Retinol</h4>
+                <img src="RNN.avif" alt="Oily Skin Tips">
+                <p>Vitamin A Serum</p>
+                <p class="routine-rating">★★★★☆ (4.5/5)</p>
+
+                <h4>Moisturizer</h4>
+                <img src="PMNN.jpg" alt="Oily Skin Tips">
+                <p>PM Facial Moisturizing Lotion</p>
+                <p class="routine-rating">★★★★★ (4.8/5)</p>
+        </div>
+
+        <div class="product-card routine-card" data-category="combination">
+            <h3>Combination Skin - Morning Routine</h3>
+            <h4>Cleanser</h4>
+            <img src="LMC.webp" alt="Combination Skin Tips">
+            <p>Low pH Good Morning Gel Cleanser</p>
+            <p class="routine-rating">★★★★★ (4.7/5)</p>
+
+            <h4>Toner/Mist</h4>
+            <img src="AMC.jpg" alt="Combination Skin Tips">
+            <p>Alcohol-Free Witch Hazel Toner (Rose Petal)</p>
+            <p class="routine-rating">★★★★☆ (4.6/5)</p>
+
+            <h4>Antioxidant Serum</h4>
+            <img src="VMC.jpg" alt="Combination Skin Tips">
+            <p>Vitamin C Suspension 23% + HA Spheres 2%</p>
+            <p class="routine-rating">★★★★☆ (4.4/5)</p>
+
+            <h4>Moisturizer</h4>
+            <img src="MMC.jpg" alt="Combination Skin Tips">
+            <p>Multi-Vitamin Nourishing Moisturizer</p>
+            <p class="routine-rating">★★★★☆ (4.2/5)</p>
+
+            <h4>Sunscreen</h4>
+            <img src="SMC.webp" alt="Combination Skin Tips">
+            <p>SPF 50 Sunscreen Gel Cream</p>
+            <p class="routine-rating">★★★★☆ (4.5/5)</p>
+
+            <h3 class="routine-type">Combination Skin - Night Routine</h4>
+            
+                <h4>Water-Based Cleanser</h4>
+                <img src="TNC.jpg" alt="Combination Skin Tips">
+                <p>Toleriane Purifying Foaming Cream</p>
+                <p class="routine-rating">★★★★☆ (4.5/5)</p>
+
+                <h4>Toner/Mist</h4>
+                <img src="SNC.jpg" alt="Combination Skin Tips">
+                <p>Supple Preparation Facial Toner</p>
+                <p class="routine-rating">★★★★★ (4.8/5)</p>
+
+                <h4>Targeted Serum</h4>
+                <img src="NNC.webp" alt="Combination Skin Tips">
+                <p>Niacinamide 10% + Zinc 1%</p>
+                <p class="routine-rating">★★★★★ (4.7/5)</p>
+
+                <h4>Retinol</h4>
+                <img src="VNC.jpg" alt="Combination Skin Tips">
+                <p>Vitamin A Serum</p>
+                <p class="routine-rating">★★★★☆ (4.5/5)</p>
+
+                <h4>Moisturizer</h4>
+                <img src="PMNC.jpg" alt="Combination Skin Tips">
+                <p>PM Facial Moisturizing Lotion</p>
+                <p class="routine-rating">★★★★★ (4.8/5)</p>
+    
+        </div>
+
+        <div class="product-card routine-card" data-category="oily">
+            <h3>Oily Skin - Morning Routine</h3>
+            <h4>Cleanser</h4>
+            <img src="LMO.jpg" alt="Oily Skin Tips">
+            <p>Low pH Good Morning Gel Cleanser</p>
+            <p class="routine-rating">★★★★★ (4.7/5)</p>
+
+            <h4>Toner/Mist</h4>
+            <img src="AMO.webp" alt="Oily Skin Tips">
+            <p>Alcohol-Free Witch Hazel Toner (Rose Petal)</p>
+            <p class="routine-rating">★★★★☆ (4.6/5)</p>
+
+            <h4>Hydrating Serum</h4>
+            <img src="HMO.jpg" alt="Oily Skin Tips">
+            <p>Hyaluronic Acid</p>
+            <p class="routine-rating">★★★★☆ (4.5/5)</p>
+
+            <h4>Moisturizer</h4>
+            <img src="MMO.jpg" alt="Oily Skin Tips">
+            <p>Multi-Vitamin Nourishing Moisturizer</p>
+            <p class="routine-rating">★★★★☆ (4.2/5)</p>
+
+            <h4>Sunscreen</h4>
+            <img src="SMO.png" alt="Oily Skin Tips">
+            <p>SPF 50 Sunscreen Gel Cream</p>
+            <p class="routine-rating">★★★★☆ (4.5/5)</p>
+
+            <h3 class="routine-type">Oily Skin - Night Routine</h4>
+            
+                <h4>Water-Based Cleanser</h4>
+                <img src="TNO.webp" alt="Oily Skin Tips">
+                <p>Toleriane Purifying Foaming Cream</p>
+                <p class="routine-rating">★★★★☆ (4.5/5)</p>
+
+                <h4>Toner/Mist</h4>
+                <img src="SNO.jpg" alt="Oily Skin Tips">
+                <p>Supple Preparation Facial Toner</p>
+                <p class="routine-rating">★★★★★ (4.8/5)</p>
+
+                <h4>Targeted Serum</h4>
+                <img src="NNO.jpg" alt="Oily Skin Tips">
+                <p>Niacinamide 10% + Zinc 1%</p>
+                <p class="routine-rating">★★★★★ (4.7/5)</p>
+
+                <h4>Retinol</h4>
+                <img src="VNO.jpg" alt="Oily Skin Tips">
+                <p>Vitamin A Serum</p>
+                <p class="routine-rating">★★★★☆ (4.5/5)</p>
+
+                <h4>Moisturizer</h4>
+                <img src="CNO.jpg" alt="Oily Skin Tips">
+                <p>PM Facial Moisturizing Lotion</p>
+                <p class="routine-rating">★★★★★ (4.8/5)</p>
+            
+        </div>
+    </div>
+</section>
+
+    <section id="sustainability">
+    <div class="sustainability-header">
+        <h2>Sustainability: Eco-Friendly Practices & Cruelty-Free Products</h2>
+        <p>Discover how sustainable skincare is better for you and the planet.</p>
+    </div>
+
+    <div class="sustainability-content">
+        <!-- Section 1: Eco-Friendly Practices -->
+        <div class="sustainability-box eco-practices">
+            <i class="fas fa-leaf sustainability-icon"></i>
+            <h3>Eco-Friendly Practices & Packaging</h3>
+            <p>
+                Sustainable skincare brands use ethically sourced, organic, and biodegradable ingredients to reduce environmental impact. Packaging is made from recyclable materials like glass, aluminum, or cardboard, cutting down on plastic use.
+            </p>
+            <p>
+                These brands promote sustainable routines with biodegradable packaging, ensuring less waste and pollution.
+            </p>
+        </div>
+
+        <!-- Section 2: Cruelty-Free Products -->
+        <div class="sustainability-box cruelty-free">
+            <i class="fas fa-paw sustainability-icon"></i>
+            <h3>Cruelty-Free Products</h3>
+            <p>
+                Cruelty-free practices go hand-in-hand with eco-conscious efforts. Brands committed to sustainability ensure their products are not tested on animals, advocating for a compassionate, ethical industry.
+            </p>
+        </div>
+
+        <!-- Section 3: Why It Matters -->
+        <div class="sustainability-box why-matters">
+            <i class="fas fa-globe sustainability-icon"></i>
+            <h3>Why Sustainable Skincare Matters</h3>
+            <p>
+                Sustainable skincare is great for sensitive or allergy-prone skin due to its gentler, natural ingredients. It's also environmentally friendly: plant-based, biodegradable ingredients break down quickly, reducing pollution when rinsed down the drain.
+            </p>
+            <p>
+                Unlike conventional products that contain harmful chemicals, sustainable brands reduce water contamination and protect ecosystems.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <div class="contact-info">
+	<h2>Are you looking for personalized skincare recommendations?</h2>
+    <p>While we don't offer direct consultations, here are some ways you can get in touch with experts:</p>
+		<ul>
+			<li>Consult a Dermatologist for tailored advice.</li>
+			<li>Visit a Skincare Clinic for assessments.</li>
+			<li>Explore Professional Blogs for insights.</li>
+		</ul>
+	</div>
+        <h2 style="text-align: center;">Contact Us</h2>
+		<div style="text-align: center;">
+			<a href="https://www.instagram.com" target="_blank" class="social-icon">
+				<i class="fab fa-instagram"></i>
+			</a>
+			<a href="https://www.facebook.com" target="_blank" class="social-icon">
+				<i class="fab fa-facebook-f"></i>
+			</a>
+			<a href="https://twitter.com" target="_blank" class="social-icon">
+				<i class="fab fa-twitter"></i>
+			</a>
+		</div>
+		<h4>Other Resources:</h4>
+			<ul class="resource-list">
+			<li><a href="https://www.dailymotion.com/video/x7ntwrd" target="_blank">Doc Willie Ong Skincare Tips</a></li>
+			<li><a href="https://www.projectvanity.com/projectvanity/when-less-is-more-in-skin-care-going-on-a-skincare-diet-with-olay?rq=olay" target="_blank">Kimberly Anne Capeding</a></li>
+			<li><a href="https://dmdskinsciences.com/pages/dmd-glow-program" target="_blank">DMD Online Consultation</a></li>
+			<li><a href="https://axiologybeauty.com/" target="_blank">Axiology</a></li>
+			<li><a href="https://www.rmsbeauty.com/" target="_blank">RMS Beauty</a></li>
+			<li><a href="https://juicebeauty.com/" target="_blank">Juice Beauty</a></li>
+		</ul>
+	</div>
+	<div class="meet-members">
+    <a href="members.html">Meet the Members</a>
+</div>
+</section>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f8; /* Soft background color */
+    color: #333; /* Text color */
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+}
+
+h1 {
+    color: #4CAF50; /* Header color */
+    margin-bottom: 20px;
+}
+
+.member-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three columns */
+    gap: 20px; /* Space between items */
+    margin-bottom: 20px; /* Space below the grid */
+}
+
+.member {
+    background-color: white; /* Member box background */
+    border-radius: 10px; /* Rounded corners */
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.3s; /* Animation effect */
+}
+
+.member img {
+    width: 100%; /* Make image responsive */
+    border-radius: 10px; /* Rounded image corners */
+}
+
+.member h3 {
+    margin: 10px 0 5px;
+}
+
+.member p {
+    font-size: 14px;
+    color: #777; /* Slightly lighter text color */
+}
+
+.member:hover {
+    transform: scale(1.05); /* Zoom effect on hover */
+}
+
+/* For smaller screens, adjust layout */
+@media (max-width: 768px) {
+    .member-grid {
+        grid-template-columns: repeat(2, 1fr); /* Two columns on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .member-grid {
+        grid-template-columns: 1fr; /* One column on mobile */
+    }
+}
